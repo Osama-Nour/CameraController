@@ -74,37 +74,37 @@ namespace DealWithCamera
 
 
 
-                    saveFilePhoto.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
-                    saveFilePhoto.Title = "Save an Image File";
-                    saveFilePhoto.ShowDialog();
-                    if (saveFilePhoto.FileName != "")
-                    {
-                        // Saves the Image via a FileStream created by the OpenFile method.
-                        System.IO.FileStream fs =
-                            (System.IO.FileStream)saveFilePhoto.OpenFile();
-                        // Saves the Image in the appropriate ImageFormat based upon the
-                        // File type selected in the dialog box.
-                        // NOTE that the FilterIndex property is one-based.
-                        switch (saveFilePhoto.FilterIndex)
-                        {
-                            case 1:
-                                this.btn_capture.Image.Save(fs,
-                                  System.Drawing.Imaging.ImageFormat.Jpeg);
-                                break;
+                    //saveFilePhoto.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+                    //saveFilePhoto.Title = "Save an Image File";
+                    //saveFilePhoto.ShowDialog();
+                    //if (saveFilePhoto.FileName != "")
+                    //{
+                    //    // Saves the Image via a FileStream created by the OpenFile method.
+                    //    System.IO.FileStream fs =
+                    //        (System.IO.FileStream)saveFilePhoto.OpenFile();
+                    //    // Saves the Image in the appropriate ImageFormat based upon the
+                    //    // File type selected in the dialog box.
+                    //    // NOTE that the FilterIndex property is one-based.
+                    //    switch (saveFilePhoto.FilterIndex)
+                    //    {
+                    //        case 1:
+                    //            this.btn_capture.Image.Save(fs,
+                    //              System.Drawing.Imaging.ImageFormat.Jpeg);
+                    //            break;
 
-                            case 2:
-                                this.btn_capture.Image.Save(fs,
-                                  System.Drawing.Imaging.ImageFormat.Bmp);
-                                break;
+                    //        case 2:
+                    //            this.btn_capture.Image.Save(fs,
+                    //              System.Drawing.Imaging.ImageFormat.Bmp);
+                    //            break;
 
-                            case 3:
-                                this.btn_capture.Image.Save(fs,
-                                  System.Drawing.Imaging.ImageFormat.Gif);
-                                break;
-                        }
+                    //        case 3:
+                    //            this.btn_capture.Image.Save(fs,
+                    //              System.Drawing.Imaging.ImageFormat.Gif);
+                    //            break;
+                    //    }
 
-                        fs.Close();
-                    }
+                    //    fs.Close();
+                    //}
                 }
                 else
                 {
